@@ -18,14 +18,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".nearby.NearbyActivity" />
-        <activity android:name=".TravelEventActivity" />
-        <activity android:name=".TravelExpenceActivity" />
-        <activity android:name=".TravelMomentActivity" />
-        <activity android:name=".WeatherActivity"></activity>
+        <activity
+            android:name=".SignInActivity"
+            android:label="SIgn In" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:label="Register" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home" />
+
+        <activity
+            android:name=".nearby.NearbyActivity"
+            android:label="Nearby places" />
+
+        <activity
+            android:name=".TravelEventActivity"
+            android:label="Travel event" />
+
+        <activity
+            android:name=".TravelExpenceActivity"
+            android:label="Travel expense" />
+
+        <activity
+            android:name=".TravelMomentActivity"
+            android:label="Travel moment" />
+
+        <activity
+            android:name=".WeatherActivity"
+            android:label="Weather update" />
+
+        <activity
+            android:name=".MomentGalleryActivity"
+            android:label="Moment gallery">
+
+        </activity>
     </application>
 
 </manifest>

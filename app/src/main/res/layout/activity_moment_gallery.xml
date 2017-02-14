@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_weather"
+    android:id="@+id/activity_moment_gallery"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context="juborajsarker.mytourmate.WeatherActivity">
+    tools:context="juborajsarker.mytourmate.MomentGalleryActivity">
+
 
 </LinearLayout>
