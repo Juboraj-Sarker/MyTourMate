@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "555130862396",
+    "firebase_url": "https://tourmate-5ed70.firebaseio.com",
+    "project_id": "tourmate-5ed70",
+    "storage_bucket": "tourmate-5ed70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555130862396:android:a4cccee2fe259bdf",
+        "android_client_info": {
+          "package_name": "juborajsarker.mytourmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555130862396-ldo052uhsn90e4f90hiam5kcifat1n4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB_YHjxmEzG9zR-KjNqJN2zhedMh0ldDk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
