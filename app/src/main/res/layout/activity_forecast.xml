@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forcast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="juborajsarker.mytourmate.weatheractivity.ForecastActivity">
+
+    <TextView
+        android:id="@+id/forcastTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Weekly Forcast"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forcastTitle"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/forecastWeatherImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_na" />
+
+        <TextView
+            android:id="@+id/forecastDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of day" />
+
+        <TextView
+            android:id="@+id/forecastDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forecastColumnTitle"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/forecastHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forecastDay"
+            android:text="High" />
+
+        <TextView
+            android:id="@+id/forecastLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forecastDay"
+            android:text="Low" />
+
+        <TextView
+            android:id="@+id/forecastText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forecastLow"
+            android:text="Text" />
+    </LinearLayout>
+
+</RelativeLayout>

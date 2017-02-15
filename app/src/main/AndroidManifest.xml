@@ -47,14 +47,18 @@
             android:label="Travel moment" />
 
         <activity
-            android:name=".WeatherActivity"
-            android:label="Weather update" />
-
-        <activity
             android:name=".MomentGalleryActivity"
             android:label="Moment gallery">
 
         </activity>
+        <activity
+            android:name=".WeatherMainActivity"
+            android:label="Weather Main Activity">
+
+        </activity>
+        <activity
+            android:name=".WeatherDetail"
+            android:label="Weather Details Activity"></activity>
     </application>
 
 </manifest>

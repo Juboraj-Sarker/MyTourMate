@@ -1,11 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_weather"
+    android:id="@+id/weatherBackgroundLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:orientation="vertical"
-    tools:context="juborajsarker.mytourmate.WeatherActivity">
+    android:background="@drawable/weatherdefault"
+    android:fitsSystemWindows="true"
 
-</LinearLayout>
+    tools:context="juborajsarker.mytourmate.WeatherMainActivity">
+
+    <RelativeLayout
+        android:id="@+id/cityControllRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/cityControllLinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cityListView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/list_icon" />
+
+            <TextView
+                android:id="@+id/cityNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:padding="17dp"
+                android:text="Dhaka, BD"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/addCityButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/plus_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="bottom">
+
+        <LinearLayout
+
+            android:id="@+id/weatherStatusLinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/currentWConditionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="17dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/currentWTempTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="17dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="70sp" />
+
+
+            <TextView
+                android:id="@+id/currentWLocationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="17dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/lastUpdateDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="17dp"
+                android:text=""
+                android:textColor="#fff" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/weatherConidtionImageView"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/icon_na" />
+
+    <RelativeLayout
+        android:id="@+id/dateTimeRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/weatherConidtionImageView"
+        android:gravity="center"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/showTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:text="00:00"
+
+            android:textColor="#fff"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/showAmPmTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="38dp"
+            android:text="am"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/showDateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/showTimeTV"
+            android:layout_marginTop="-10dp"
+            android:gravity="right"
+            android:paddingRight="35dp"
+            android:text="YYYY/MMMM/DD"
+            android:textAlignment="textEnd"
+            android:textColor="#fff"
+            android:textSize="20sp"
+
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forecastViewTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="5"
+        android:onClick="goToForecast"
+        android:paddingLeft="17dp"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/weatherDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/forecastViewTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="5"
+        android:onClick="goToDetails"
+        android:paddingLeft="17dp"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,8 +1,8 @@
 package juborajsarker.mytourmate;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import juborajsarker.mytourmate.nearby.NearbyActivity;
@@ -37,6 +37,6 @@ public class HomeActivity extends AppCompatActivity {
 
     public void weatherUpdate(View view) {
 
-        startActivity(new Intent(HomeActivity.this, WeatherActivity.class));
+        startActivity(new Intent(HomeActivity.this, WeatherMainActivity.class));
     }
 }
