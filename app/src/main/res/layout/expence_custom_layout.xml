@@ -36,9 +36,10 @@
                     android:layout_height="wrap_content"
                     android:drawableTint="#FF4081"
                     android:hint="Expense Details"
+                    android:textColorHint="#b5b4b4"
                     android:inputType="text"
                     android:singleLine="true"
-                    android:textColorHint="#000" />
+                    android:textColor="#000" />
 
 
                 <EditText
@@ -50,7 +51,8 @@
                     android:hint="Expense Amount in TK"
                     android:inputType="numberDecimal"
                     android:singleLine="true"
-                    android:textColorHint="#000" />
+                    android:textColorHint="#b5b4b4"
+                    android:textColor="#000" />
 
 
                 <Button

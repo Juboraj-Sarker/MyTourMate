@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -35,11 +36,11 @@
             android:label="Nearby places" />
 
         <activity
-            android:name=".TravelEventActivity"
+            android:name=".travel_event.TravelEventActivity"
             android:label="Travel event" />
 
         <activity
-            android:name=".TravelExpenceActivity"
+            android:name=".travel_expence.TravelExpenceActivity"
             android:label="Travel expense" />
 
         <activity

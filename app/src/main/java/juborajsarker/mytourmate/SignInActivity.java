@@ -2,6 +2,7 @@ package juborajsarker.mytourmate;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignInActivity extends AppCompatActivity {
 
+    SharedPreferences sharedPreferences;
+
     private EditText emailEditText;
     private EditText passwordEditText;
     private FirebaseAuth firebaseAuth;
@@ -28,6 +31,9 @@ public class SignInActivity extends AppCompatActivity {
         emailEditText = (EditText) findViewById(R.id.userEmailForLoginEt);
         passwordEditText = (EditText) findViewById(R.id.userPasswordForLoginEt);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        sharedPreferences = getSharedPreferences("loginStatus", MODE_PRIVATE);
+        Boolean isLogedIn = sharedPreferences.getBoolean("isLogedIn", false);
     }
 
 
@@ -47,11 +53,18 @@ public class SignInActivity extends AppCompatActivity {
                       progressDialog.dismiss();
 
                 if (task.isSuccessful()){
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("isLogedIn", true);
+                    editor.commit();
 
                     Toast.makeText(SignInActivity.this, "Login Success...", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignInActivity.this, HomeActivity.class));
 
                 }else {
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("isLogedIn", false);
+                    editor.commit();
 
                     Toast.makeText(SignInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
