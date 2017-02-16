@@ -8,5 +8,21 @@
     android:orientation="vertical"
     tools:context="juborajsarker.mytourmate.MomentGalleryActivity">
 
+    <TextView
+        android:id="@+id/textWillBeShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Here image will be shown"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/showImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp" />
+
 
 </LinearLayout>

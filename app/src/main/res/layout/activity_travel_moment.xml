@@ -14,14 +14,7 @@
         android:orientation="horizontal">
 
 
-        <Button
-            style="@style/DefaultButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_default_bg"
-            android:onClick="viewGalarry"
-            android:text="Moment gallery"
-            android:textAllCaps="false" />
+
 
 
     </LinearLayout>
@@ -45,6 +38,7 @@
 
 
             <EditText
+                android:id="@+id/travel_moment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -57,9 +51,9 @@
                 android:id="@+id/imageCapture"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:onClick="takePhoto"
                 android:padding="10dp"
-                android:src="@drawable/camera"
-                android:onClick="takePhoto"/>
+                android:src="@drawable/camera" />
 
             <Button
                 android:id="@+id/uploadBtn"
@@ -80,7 +74,8 @@
         <ImageView
             android:id="@+id/saveImageShow"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp" />
 
     </LinearLayout>
 
